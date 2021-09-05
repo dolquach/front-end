@@ -1,0 +1,69 @@
+<div class="menu">
+  <ul>
+    DANH MỤC SẢN PHẨM
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Coca Cola</li>
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Coca Cola</li>
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Coca Cola</li>
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Coca Cola</li>
+    <li>Coffee</li>
+  </ul>
+</div>
+<div class="clearfix">
+  <div class="top">
+    <div class="promotion">
+      <div id="demo" class="carousel slide" data-ride="carousel">
+
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+          <li data-target="#demo" data-slide-to="0" class="active"></li>
+          <li data-target="#demo" data-slide-to="1"></li>
+          <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+        
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img [src]="imageUrl" alt="Los Angeles" width="1100" height="500">
+          </div>
+          <div class="carousel-item">
+            <img [src]="imageUrl1" alt="Chicago" width="1100" height="500">
+          </div>
+          <div class="carousel-item">
+            <img [src]="imageUrl2" alt="New York" width="1100" height="500">
+          </div>
+        </div>
+      </div>
+      <div class="producthot" MyBackgroundColor>
+        <span>Nhóm hàng bán chạy</span>
+        <div *ngFor="let producthot of producthots" class="producthot-img">
+            <div class="product">
+              <img [src]=producthot.url alt="">
+              <p>{{producthot.name}}</p>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="homebody" MyBackgroundColor>
+      <div class="homebody-nav">
+        <span>Hàng thiết yếu</span>
+
+      </div>
+      <div class="product-necessary-nav">
+        <div *ngFor="let producthot of producthots" class="product-necessary-bar">
+          <div class="product-necessary">
+            <img [src]=producthot.url alt="">
+            <p>{{producthot.name}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+</div>
